@@ -3,60 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>廖东亮-个人简历</title>
+    <title>学术主页 - 廖东亮</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #7f8c8d;
+            --accent-color: #3498db;
+            --light-gray: #f5f5f5;
+            --banner-color: #2c3e50;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
         }
-        header {
+        
+        .banner {
+            background-color: var(--banner-color);
+            color: white;
+            padding: 15px 0;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        h1 {
+        
+        .banner h1 {
+            margin: 0;
             font-size: 24px;
+            letter-spacing: 1px;
         }
+        
+        .container {
+            padding: 0 20px;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 3px solid var(--light-gray);
+        }
+        
+        h1.name {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .position {
+            color: var(--primary-color);
+            font-weight: normal;
+            margin: 8px 0;
+        }
+        
+        .contact {
+            margin-top: 10px;
+        }
+        
         section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
+        
         h2 {
-            font-size: 18px;
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            font-size: 22px;
         }
-        ul {
-            list-style: disc;
-            padding-left: 20px;
+        
+        .paper {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid var(--light-gray);
+        }
+        
+        .paper-title {
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        
+        .paper-authors {
+            font-style: normal;
+            margin-bottom: 5px;
+        }
+        
+        .author-me {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .paper-venue {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .paper-doi {
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+        
+        .paper-links {
+            margin-top: 5px;
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            color: var(--secondary-color);
+            font-size: 14px;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>廖东亮-个人简历</h1>
-    </header>
-    <main>
-        <section>
-            <h2>个人信息</h2>
-            <p>姓名: 廖东亮</p>
-            <p>邮箱: liaodl@scut.edu.cn</p>
+    <div class="banner">
+        <h1>华南理工大学 电子与信息学院</h1>
+    </div>
+    
+    <div class="container">
+        <header>
+            <img src="src/profile.jpg" alt="个人照片" class="profile-img">
+            <div>
+                <h1 class="name">廖东亮</h1>
+                <p class="position">副教授</p>
+                <p class="position">硕士生/博士生导师</p>
+                <div class="contact">
+                    <p>邮箱: <a href="liaodl@scut.edu.cn">liaodl@scut.edu.cn</a></p>
+                    <p>办公室: 华南理工大学五山校区 宏生科技楼 601</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>个人简介</h2>
+            <p>本人在中国科学技术大学计算机学院先后获得学士和博士学位，后加入腾讯公司微信事业群担任高级研究员多年。在 SIGIR, AAAI, WWW, ACMMM 等顶级学术会议和 IJCV, TNNLS, TAC 等顶级期刊发表学术论文二十余篇，其中第一和通讯作者文章十余篇，获授权发明专利11件。在腾讯工作期间，基于微信的百亿级内容生态和数亿日活用户，开展多模态内容理解、搜索推荐系统等方向的学术研究和业务落地工作，研究成果多次获得“机器之心”、“36氪” 等行业头部媒体报道。</p>
         </section>
-        <section>
-            <h2>教育背景</h2>
-            <p>2010年9月 - 2014年6月, 本科, 中国科学技术大学, 计算机科学与技术</p>
-            <p>2014年9月 - 2019年6月, 博士研究生, 中国科学技术大学, 计算机软件与理论</p>
-        </section>
-        <section>
-            <h2>工作经历</h2>
-            <p>2019年7月 - 2025年2月, 应用研究-高级研究员, 腾讯公司-微信事业群</p>
-            <p>2015年3月 - 现在，副教授, 华南理工大学，电子与信息学院</p>
-        </section>
-        <section>
-            <h2>研究兴趣</h2>
+
+        <section id="research">
+            <h2>研究方向</h2>
             <ul>
-                <li>多模态内容理解</li>
-                <li>个性化搜索与推荐</li>
-                <li>大模型应用研究</li>
+                <li>基于大模型的搜索与推荐系统</li>
+                <li>多模态大模型应用研究</li>
+                <li>多模态感知与具身智能</li>
             </ul>
         </section>
-    </main>
+
+        <section id="publications">
+            <h2>代表性论文</h2>
+            <div class="paper">
+                <div class="paper-title">Wang, J., Zeng, Z., Chen, B., Wang, Y., <span class="author-me">Liao, D.</span>, Li, G., & Xia, S. T. (2024). Hugs bring double benefits: Unsupervised cross-modal hashing with multi-granularity aligned transformers. International Journal of Computer Vision, 132(8), 2765-2797.</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Zeng, Y., Wang, Y., <span class="author-me">Liao, D.</span>, Li, G., Xu, J., Man, H., & Xu, X. (2024). Contrastive topic-enhanced network for video captioning. Expert Systems with Applications, 237, 121601.</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Zhao, M., Wang, J., <span class="author-me">Liao, D.</span>*, Wang, Y., Duan, H., & Zhou, S.* (2023, July). Keyword-Based Diverse Image Retrieval by Semantics-aware Contrastive Learning and Transformer. In Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (pp. 1262-1272).</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Tang, X.#, <span class="author-me">Liao, D.</span>#, Shen, M., Zhu, L., Huang, S., Li, G., ... & Xu, J. (2023). Confidence-aware sentiment quantification via sentiment perturbation modeling. IEEE Transactions on Affective Computing, 15(2), 736-750.</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Gao, L.#, <span class="author-me">Liao, D.</span>#, Li, G., Xu, J., & Zhuo, H. H. (2022, April). Semantic IR fused Heterogeneous Graph Model in Tag-based Video Search. In Proceedings of the ACM Web Conference 2022 (pp. 94-98).</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Liu, P., <span class="author-me">Liao, D.</span>*, Wang, J., Wu, Y., Li, G., Xia, S. T.*, & Xu, J. (2022, April). Multi-task ranking with user behaviors for text-video search. In Proceedings of the ACM Web Conference 2022 (pp. 126-130).</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Wang, J., Chen, B., <span class="author-me">Liao, D.</span>*, Zeng, Z., Li, G., Xia, S. T.*, & Xu, J. (2022, April). Hybrid contrastive quantization for efficient cross-view video retrieval. In Proceedings of the ACM Web Conference 2022 (pp. 3020-3030).</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Wang, J., Zeng, Z., Chen, B., Wang, Y., <span class="author-me">Liao, D.</span>*, Li, G., & Intelligence, P. C. (2022, November). Hugs Are Better Than Handshakes: Unsupervised Cross-Modal Transformer Hashing with Multi-granularity Alignment. In BMVC (p. 1035)</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title"><span class="author-me">Liao, D.</span>, Xu, J., Li, G., & Wang, Y. (2021, May). Hierarchical coherence modeling for document quality assessment. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 35, No. 15, pp. 13353-13361).</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title">Tang, X.#, <span class="author-me">Liao, D.</span>#, Huang, W., Xu, J., Zhu, L., & Shen, M. (2021). Fully Exploiting Cascade Graphs for Real-time Forwarding Prediction. Proceedings of the AAAI Conference on Artificial Intelligence, 35(1), 582-590.</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title"><span class="author-me">Liao, D.</span>, Xu, J., Li, G., Huang, W., Liu, W., & Li, J. (2019). Popularity Prediction on Online Articles with Deep Fusion of Temporal Process and Content Features. Proceedings of the AAAI Conference on Artificial Intelligence, 33(01), 200-207.</div>
+            </div>
+            <div class="paper">
+                <div class="paper-title"><span class="author-me">Liao, D.</span>, Liu, W., Zhong, Y., Li, J., & Wang, G. (2018). Predicting activity and location with multi-task context aware recurrent neural network. Proceedings of the 27th International Joint Conference on Artificial Intelligence, IJCAI 2018.</div>
+            </div>
+            
+            <div class="paper">
+                <div class="paper-title"><span class="author-me">Liao, D.</span>, Zhong, Y., Li, J. (2017). Location Prediction Through Activity Purpose: Integrating Temporal and Sequential Models. In: Kim, J., Shim, K., Cao, L., Lee, JG., Lin, X., Moon, YS. (eds) Advances in Knowledge Discovery and Data Mining. PAKDD 2017.</div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2025 廖东亮 - 华南理工大学电子与信息学院 - 最后更新: 2025年3月</p>
+        </footer>
+    </div>
 </body>
 </html>
